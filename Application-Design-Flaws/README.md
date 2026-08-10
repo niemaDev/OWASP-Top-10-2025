@@ -1,8 +1,8 @@
 # OWASP Top 10 2025: Application Design Flaws
 
-Before we start working on the room challenges, let us see what OWASP means and what the Top 10 in 2025 actually is.
+Before dive in to the room, let us see what OWASP means and what the Top 10 in 2025 actually is.
 
-As we know, nowadays we use digital apps and systems widely, and those apps are created using code. Sometimes that code has a mistake in it. This mistake can be one of two things: a bug, or a security issue. If the mistake is a bug, it might cause something like an unresponsive button or a small glitch. But if the mistake causes a security issue, it can ruin a lot of things.
+As we know, nowadays we use digital apps and systems widely, and those apps are created using code. Sometimes a code may have a mistake in it. This mistake can be one of two things: a bug, or a security issue. If the mistake is a bug, it might cause something like an unresponsive button . But if the mistake causes a security issue, it can ruin a lot of things.
 
 Developers may not even know about a security issue, because they're busy, or because it's a lot to study every single security issue that exists at once. So here became the main question: which security issues happen the most, and which ones cause the most damage?
 
@@ -41,7 +41,7 @@ Because these mistakes are often the easiest ones for attackers to find, and the
 
 **How we can fix it:**
 
-Turn off anything you're not using. Change every default password before going live. Give people and systems only the access they actually need nothing more. Keep things patched. Don't let error messages show off your internal system details for example when login form build if the user enter wrong password or username the reply massage shouldn't have to specify the wrong part it should reply incorrect password or username.
+Change every default password before going live. Give people and systems only the access they actually need nothing more. Keep things patched. Don't let error messages show off your internal system details for example when login form build if the user enter wrong password or username the reply massage shouldn't have to specify the wrong part it should reply incorrect password or username.
 
 ### My walkthrough
 
@@ -49,7 +49,7 @@ The first challenge was: *navigate to MACHINE_IP:5002. It appears that the devel
 
 To get the flag I used Kali Linux by installing the VPN and connecting, rather than turning on the AttackBox.
 
-To install the VPN in Kali, I went to my TryHackMe account, clicked VM and VPN settings,
+To install open VPN in Kali, I went to my TryHackMe account, then go to VM and VPN settings,
 ![Connecting the VPN](images/vpn1.jpg)
 
  and installed it,
@@ -66,15 +66,15 @@ Then I navigated to `10.112.154.11:5002` and got this page. It says: *Retrieve u
 
 
 
-When I navigated with a numeric user ID, like `http://10.112.154.11:5002/api/user/123`, I got this:
+When I search with a numeric user ID, like `http://10.112.154.11:5002/api/user/123`, I got this:
 
-![Looking up a valid numeric user ID](images/5002-api.jpg)
+![see a valid numeric user ID](images/5002-api.jpg)
 
-So I tried a letter instead of a number: `http://10.112.154.11:5002/api/user/abc`
+So I use a letter instead of a number: `http://10.112.154.11:5002/api/user/abc`
 
 
 
-Oops — I got the flag: `THM{V3RB0S3_3RR0R_L34K}`
+Oops here is I got the flag: `THM{V3RB0S3_3RR0R_L34K}`
 
 ![The AS02 flag](images/5002-flag.jpg)
 
@@ -84,11 +84,11 @@ Oops — I got the flag: `THM{V3RB0S3_3RR0R_L34K}`
 
 **So what actually is this?**
 
-Nobody builds an app completely from scratch anymore. Every project pulls in dozens (sometimes thousands) of pieces built by other people code libraries, plugins, even AI models. A supply chain failure is when one of those borrowed pieces turns out to be compromised, outdated, or was never checked properly in the first place. The scary part? The vulnerability isn't even in *your* code  it's in something you trusted and plugged in.
+No one builds an app completely from scratch anymore. Every project pulls in many of pieces built by other people code libraries, plugins, even AI models. A supply chain failure is when one of those borrowed pieces turns out to be compromised, outdated, or was never checked properly in the first place. The scary part? The vulnerability isn't even in *your* code  it's in something you trusted and plugged in.
 
 **Why should you care?**
 
-Because one bad ingredient can spoil the whole meal. If an attacker manages to sneak malicious code into a popular library, every app using that library is now affected — without a single line of the app's own code being touched. These attacks spread fast and quietly, which makes them some of the hardest to catch.
+Because one bad ingredient can ruin the whole meal. If an attacker manages to sneak malicious code into a popular library, every app using that library is now affected — without a single line of the app's own code being touched. These attacks spread fast and quietly, which makes them some of the hardest to catch.
 
 
 **Where this usually goes wrong:**
