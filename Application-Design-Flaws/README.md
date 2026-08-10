@@ -116,9 +116,9 @@ when i try the get request /api/health i get this:
 ![API page](images/api-health.jpg)
 
 when i try the post request /api/process i get this:
-![API page](images/api-process.png)
+![API page for process](images/api-process.png)
 
-![API page](images/pro-net.png)
+![API page ](images/pro-net.png)
 
 Then I tried to go inside network tab and got this:
 ![I go to inspect then network](images/5003-network.png)
@@ -128,14 +128,15 @@ Then I tried to go inside network tab and got this:
 After that i write a sample request in body and got this:
 
 
-![result](images/5003-request.png)
+![result for a request](images/5003-request.png)
 
 
 ![Digging into the vulnerable_utils.py code path](images/py-code.png)
 
-by following the outdated python code i try new parameter to debug it
 
-![result](images/5003-flag.png)
+by following the outdated python code i try new parameter to debug it and got the flag there
+
+![result for 5003](images/5003-flag.png)
 
 
 ---
