@@ -68,7 +68,7 @@ Then I navigated to `10.112.154.11:5002` and got this page. It says: *Retrieve u
 
 When I navigated with a numeric user ID, like `http://10.112.154.11:5002/api/user/123`, I got this:
 
-![Looking up a valid numeric user ID](images/users.png)   (images/5002-api.jpg)
+![Looking up a valid numeric user ID](images/5002-api.jpg)
 
 So I tried a letter instead of a number: `http://10.112.154.11:5002/api/user/abc`
 
