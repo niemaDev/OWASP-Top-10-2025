@@ -113,15 +113,19 @@ I got this page:
 ![The 5003 challenge landing page](images/api-doc.png)
 
 when i try the get request /api/health i get this:
+
 ![API page](images/api-health.jpg)
 
 when i try the post request /api/process i get this:
+
 ![API page for process](images/api-process.png)
 
 ![API page ](images/pro-net.png)
 
 Then I tried to go inside network tab and got this:
+
 ![I go to inspect then network](images/5003-network.png)
+
 
 ![write sample](images/5003-body.png)
 
@@ -168,8 +172,11 @@ Use modern, trusted encryption standards  not something outdated or homemade. St
 
 ![Inspecting the secure-doc content](images/secure-doc.png)
 
-i use cyber chef to decribt the text
-![Decoding the weak encryption / decrib step](images/decrib.png)
+i use cyber chef to decrypt the text
+
+
+![Decoding the weak encryption ](images/decrib.png)
+
 ---
 
 ## AS06: Insecure Design
@@ -201,8 +208,9 @@ Treat every AI model like it can't be trusted until it proves otherwise. Check b
 ### My walkthrough
 ![Talking to the backend directly, bypassing the app](images/securechat.png)
 
-![Poking at the admin-facing process](images/api-process.png)
 
-![Checking exposed network/proxy config](images/pro-net.png)
 ![The 5005 admin API](images/5005-api.png)
+
+![The 5005 admin API](images/users.png)
+
 ![Admin flag](images/admin-flag.png)
