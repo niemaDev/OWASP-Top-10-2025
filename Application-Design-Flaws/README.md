@@ -83,7 +83,6 @@ Oops — I got the flag: `THM{V3RB0S3_3RR0R_L34K}`
 ## AS03: Software Supply Chain Failures
 
 **So what actually is this?**
-![The User Management API landing page](images/api-health.jpg)
 
 Nobody builds an app completely from scratch anymore. Every project pulls in dozens (sometimes thousands) of pieces built by other people code libraries, plugins, even AI models. A supply chain failure is when one of those borrowed pieces turns out to be compromised, outdated, or was never checked properly in the first place. The scary part? The vulnerability isn't even in *your* code  it's in something you trusted and plugged in.
 
@@ -113,18 +112,31 @@ I got this page:
 
 ![The 5003 challenge landing page](images/api-doc.png)
 
-Then I tried a go inside network tab and got this:
-![Setting up Burp Suite to intercept traffic](images/5003-network.png)
+when i try the get request /api/health i get this:
+![API page](images/api-health.jpg)
 
-![I go to inspect then network](images/5003-request.png)
+when i try the post request /api/process i get this:
+![API page](images/api-process.png)
+
+![API page](images/pro-net.png)
+
+Then I tried to go inside network tab and got this:
+![I go to inspect then network](images/5003-network.png)
+
+![write sample](images/5003-body.png)
 
 After that i write a sample request in body and got this:
 
-![result](images/5003-body.png)
 
+![result](images/5003-request.png)
 
 
 ![Digging into the vulnerable_utils.py code path](images/py-code.png)
+
+by following the outdated python code i try new parameter to debug it
+
+![result](images/5003-flag.png)
+
 
 ---
 
